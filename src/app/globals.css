@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-        @apply transition text-base text-gray-900 dark:text-white
-    }
+    @apply transition text-base text-gray-900 dark:text-white dark:bg-[#212129] max-w-[90%] w-[1080px] mx-auto dark:bg-grid-white/[0.2] bg-grid-black/[0.2];
+}
