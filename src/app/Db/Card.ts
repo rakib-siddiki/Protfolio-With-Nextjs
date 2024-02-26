@@ -4,7 +4,7 @@ export const CARD_DITAILS = [
     title: "Sparkle Web App",
     description:
       "Sparkle is A Chatting Application That connect to the pepole with same interest",
-    imageUrl: "/chatting.png",
+    imageUrl: "/sparkle.png",
     live: {
       label: "Live",
       url: "https:sparkle-m.netlify.app/",
