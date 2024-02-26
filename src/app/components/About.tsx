@@ -48,7 +48,10 @@ const About = () => {
         </div>
         <div className="flex flex-col lg:flex-row items-center gap-4 justify-self-end">
           <Link
-            href={"#"}
+            href={
+              "https://docs.google.com/document/d/1xERFw28KiQwzkolMfpY_U2wUoXBpyATT/edit?usp=sharing&ouid=107622900685458882405&rtpof=true&sd=true"
+            }
+            target="_blank"
             className="bg-gradient-to-b from-gray-900 to-gray-600 text-white font-medium py-3 px-12 rounded-full w-60 lg:w-auto active:scale-105"
           >
             Resume
