@@ -1,16 +1,19 @@
-export const PreviewAnimation = {
-  initial: {
-    y: 30,
-    opacity: 0,
-    scale: 0.9,
-  },
-  animate: {
-    y: 0,
+export const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
     opacity: 1,
     scale: 1,
     transition: {
-      ease: [0.6, 0.01, 0.05, 0.95],
-      duration: 0.8,
+      delayChildren: 0.4,
+      staggerChildren: 0.2,
     },
+  },
+};
+
+export const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
   },
 };

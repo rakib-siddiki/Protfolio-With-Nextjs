@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    @apply m-0 p-0 box-border scroll-smooth;
+}
+
 body {
-    @apply transition text-base text-gray-900 dark:text-white dark:bg-[#212129] max-w-[90%] w-[1080px] mx-auto dark:bg-grid-white/[0.2] bg-grid-black/[0.2];
+    @apply transition text-base text-gray-900 dark:text-white dark:bg-[#212129]  dark:bg-grid-white/[0.2] bg-grid-black/[0.2];
 }

@@ -1,13 +1,15 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React, { ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
   bgColor?: string | undefined;
+  link:string
 }
 
-const SocialButton: React.FC<Props> = ({ children, bgColor = "black" }) => {
+const SocialButton: React.FC<Props> = ({ link,children, bgColor = "black" }) => {
   let bgHoverColorClass;
 
   switch (bgColor) {
@@ -35,9 +37,9 @@ const SocialButton: React.FC<Props> = ({ children, bgColor = "black" }) => {
       transition={{ duration: 0.3 }}
       className={`group h-12 w-12 bg-white ${bgHoverColorClass} rounded-full transition-colors duration-200 ease-in-out flex justify-center items-center`}
     >
-      <div className="fill-black group-hover:fill-white transition-colors duration-200 ease-in-out">
+      <Link href={link} className="fill-black group-hover:fill-white transition-colors duration-200 ease-in-out">
         {children}
-      </div>
+      </Link>
     </motion.button>
   );
 };

@@ -6,6 +6,7 @@ import { CardBody, CardContainer, CardItem } from "./CardSettings";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Icons } from "@/core";
+import { item } from "../utils/motion";
 interface IProps {
   imageUrl: string;
   title: string;
@@ -16,6 +17,7 @@ interface IProps {
   };
   gradiant: string;
 }
+
 export default function Card({
   imageUrl,
   title,
@@ -24,10 +26,7 @@ export default function Card({
   gradiant,
 }: IProps) {
   return (
-    <motion.div
-      initial={{ x: -100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-    >
+    <motion.div variants={item}>
       <CardContainer className="inter-var">
         <CardBody
           className={`${gradiant} relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-gray-800 w-auto sm:w-[30rem] h-auto rounded-xl p-6`}
@@ -58,7 +57,7 @@ export default function Card({
             <CardItem
               translateZ={20}
               as="button"
-              className="px-4 py-2 rounded-xl text-xs pointer-events-none font-normal dark:text-white"
+              className="px-4 py-2 rounded-xl text-xs pointer-events-none font-normal dark:text-gray-900"
             >
               live view →
             </CardItem>

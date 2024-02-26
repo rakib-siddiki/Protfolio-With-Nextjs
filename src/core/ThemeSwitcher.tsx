@@ -1,9 +1,9 @@
 "use client";
-import React, { FC, useEffect, useState } from "react";
+import React, { ComponentPropsWithoutRef, FC, useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { Icons } from ".";
-
-const ThemeSwitcher: FC = () => {
+interface IProps extends ComponentPropsWithoutRef<"button"> {}
+const ThemeSwitcher: FC<IProps> = ({ className }) => {
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   useEffect(() => {
@@ -18,7 +18,11 @@ const ThemeSwitcher: FC = () => {
         className="w-fit hover:scale-110 transition"
         onClick={toggleTheme}
       >
-        {theme === "light" ? <Icons.Moon /> : <Icons.Sun />}
+        {theme === "light" ? (
+          <Icons.Moon className={className} />
+        ) : (
+          <Icons.Sun className={className} />
+        )}
       </button>
     </div>
   );

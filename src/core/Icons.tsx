@@ -1,9 +1,11 @@
 import React from "react";
-import { Sun, Moon, LucideProps,Link} from "lucide-react";
+import { Sun, Moon, LucideProps,Link,Menu,X} from "lucide-react";
 const Icons = {
   Sun,
   Moon,
   Link,
+  Menu,
+  X,
   EmptyBox: (props: LucideProps) => (
     <svg
       {...props}
