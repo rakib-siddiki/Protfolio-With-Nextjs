@@ -51,7 +51,7 @@ const Navbar = () => {
       {/* smaller device */}
       <nav
         className={`p-5 fixed lg:hidden z-50 i w-full  bg-gradient-to-t from-yellow-50 to-white dark:bg-gradient-to-t dark:from-black  
-        dark:to-black${
+        dark:to-black ${
           show &&
           "h-full  bg-gradient-to-t from-yellow-50/90 to-white dark:bg-gradient-to-t dark:from-black/85  dark:to-black/85"
         }`}
